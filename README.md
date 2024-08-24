@@ -112,10 +112,9 @@ The output if you use <code>attempts += 1</code>
 ![photo_2024-08-25 05 28 42](https://github.com/user-attachments/assets/ec60c157-f081-453a-b945-059279740730)
 
 # Documents 
+<a href="https://docs.pwntools.com/en/latest/tubes/ssh.html">pwntools for SSH</a>
 
-# <a href="https://docs.pwntools.com/en/latest/tubes/ssh.html">pwntools for SSH</a>
-
-# <a href="https://docs.paramiko.org/en/latest/api/ssh_exception.html">paramiko</a>
+<a href="https://docs.paramiko.org/en/latest/api/ssh_exception.html">paramiko</a>
 
 
 # Troubleshooting
