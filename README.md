@@ -1,7 +1,7 @@
 # SSH-login-brute-forcing
 
 # Description
-A Python script for SSH password brute forcing using a list of possible common credentials. This is a guided learning from TCM Security: Python 101. Although this is a guided learning, I have also encountered a few problems and the solutions can be accessed at the end of this note. 
+A Python script for SSH password brute forcing using a list of possible common credentials. This activity is not suitable for excessive authentication attempts; it is advisable to use a wordlist with up to 10 passwords. In this instance, my text file contains 816 passwords, which resulted in SSH blocking my authentication attempts after less than 20 attempts. Alternatively, I added SSHException handling to manage the error if I choose to continue using a wordlist with more than 10 entries.
 
 # Features:
 - pwn library
@@ -30,7 +30,9 @@ host = "127.0.0.1"
 username = "kali"
 attempts = 0
 ```
-
+*host=your target IP
+*username=your target username
+*attempts= start from 0
 
 <b>3) Iterating over some lists of passwords</b>
 
@@ -121,6 +123,7 @@ The output if you use <code>attempts += 1</code>
 
 # Troubleshooting
 
+This activity can test out up to 10 attempts
 
 1) EOF Error & Error reading SSH protocol banner
 
@@ -144,3 +147,4 @@ except Exception as e:
 Solution:
 
 Timeout has increased to 10s because 1s is too short and might disrupt the SSH connection. Preferably 10s-30s.
+
