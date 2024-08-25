@@ -97,9 +97,11 @@ attempts += 1
 
 *<code>except paramiko.ssh_exception.AuthenticationException:</code> is an exception class from the Paramiko library, which is used for handling SSH connections in Python. This exception is raised when an authentication attempt fails—meaning the username or password used to connect via SSH is incorrect.
 
-*so when the <code>except</code> fails, it will print out <code>Invalid password!</code>
+*when the <code>except</code> fails, it will print out <code>Invalid password!</code>
 
 *<code>attempts +=1</code> is used to count how many passwords you have tried and failed so you can keep track how many failed attempts you encounter. So every failed attempt will increase by 1
+
+*<code>[X]</code> is just a decorative element, it does not affect the output. You can print the string without it.
 
 The output if you use <code>attempts += 1</code>
 ![Screenshot 2024-08-25 at 3 23 06 AM](https://github.com/user-attachments/assets/5d67bc84-2e3b-4782-945b-f721a760bd4f)
@@ -132,8 +134,10 @@ Added another <code>.SSHException</code> to the code to function normally after 
 except paramiko.ssh_exception.SSHException as e:
   print(f"[!] SSHException: {e}")
 except Exception as e:
-  print(f"[!] Unexpection Exception: {e}")
+  print(f"[!] Unexpected Exception: {e}")
 ```
+
+*<code>[!]</code> is just a decorative element, it does not affect the output. You can print the string without it.
 
 2) Timeout=1s is too short
    
