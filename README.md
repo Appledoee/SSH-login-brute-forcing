@@ -123,9 +123,13 @@ The output if you use <code>attempts += 1</code>
 
 # Troubleshooting
 
-This activity can test out up to 10 attempts
+1) This activity can test out up to 10 attempts
 
-1) EOF Error & Error reading SSH protocol banner
+Solution:
+
+Use a wordlist that has less than 10 passwords or you can opt for .SSHException to fix the error (refer next)
+
+2) EOF Error & Error reading SSH protocol banner
 
 ![Screenshot 2024-08-25 at 5 34 22 AM](https://github.com/user-attachments/assets/85c7b9cd-1c3d-41c7-b91f-5794addbf7ec)
 
@@ -142,7 +146,7 @@ except Exception as e:
 
 *<code>[!]</code> is just a decorative element, it does not affect the output. You can print the string without it.
 
-2) Timeout=1s is too short
+3) Timeout=1s is too short
    
 Solution:
 
